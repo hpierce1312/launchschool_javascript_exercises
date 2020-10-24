@@ -17,12 +17,25 @@
 // times(times(times(times(times(1,1),2),3),4),5);
 
 
+// OR
+
+// function factorial(input) {
+//     let result = 1;
+//     for (input; input > 0; input -= 1) {
+//         result = result * input;
+//     }
+//     return result;
+// }
+
+
+// OR
+
 function factorial(input) {
-    let result = 1;
-    for (input; input > 0; input -= 1) {
-        result = result * input;
+    if (input <= 1) {
+        return 1;
     }
-    return result;
+
+    return input * factorial(input - 1);
 }
 
 console.log(factorial(0));     // => 1
